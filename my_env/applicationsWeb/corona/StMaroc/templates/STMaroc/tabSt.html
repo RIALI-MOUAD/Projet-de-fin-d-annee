@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #fffdd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddd;
+    }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button" >
+      <a href="{% url 'home' %}">Home</a>
+    </button>
+    <button type="button" name="button">
+      <a href="{% url 'newc' %}">Retour</a>
+    </button>
+    <table>
+      <tr>
+        <td>date</td>
+        <td>Total Cases</td>
+        <td>Total Recovered</td>
+        <td>Total Deaths</td>
+        <td>Total Tests</td>
+        <td>Cases of the day</td>
+        <td>REcovered of the day</td>
+        <td>Deaths of the day</td>
+        <td>Tests of the day</td>
+      </tr>
+      {% for item in qs%}
+      <tr>
+        <td>{{item.date}}</td>
+        <td>{{item.cases}}</td>
+        <td>{{item.recov}}</td>
+        <td>{{item.death}}</td>
+        <td>{{item.tests}}</td>
+        <td>{{item.casesD}}</td>
+        <td>{{item.recovD}}</td>
+        <td>{{item.deathD}}</td>
+        <td>{{item.testsD}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <button type="button" name="button">
+      <a href="{% url 'home' %}">Home</a>
+    </button>
+    <button type="button" name="button">
+      <a href="{% url 'stat' %}">Retour</a>
+    </button>
+  </body>
+</html>

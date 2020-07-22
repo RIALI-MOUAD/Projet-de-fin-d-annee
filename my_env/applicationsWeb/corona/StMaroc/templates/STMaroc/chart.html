@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base0.html' %}
+
+{% block title %}Cases per Day (Morocco){% endblock title %}
+
+
+{% block content %}
+<div id="container" style="width: 75%;">
+   <canvas id="myChart" ></canvas>
+</div>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [{% for item in qs %}'{{item.date}}',{% endfor %}],
+        datasets: [{
+            label: ' of Cases',
+            data: [{% for item in qs %}{{item.cases}},{% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+                'Red'
+            ],
+            borderWidth: 3
+        }]
+    },
+
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+{% endblock %}

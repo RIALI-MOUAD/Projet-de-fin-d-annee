@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BASE CSV</title>
+  </head>
+  <body>
+    <p>Country,TotalCases,NewCases,Deaths,NewDeaths,Recover,ActiveCases,Serious,CasesParMillion,DeathParMillion,Tests,TestParMillion,Continent</p>
+    {% for item in qs%}
+     <p>{{item.name}},{{item.cases}},{{item.New_cases}},{{item.death}},{{item.New_Deaths}},{{item.Recover}},{{item.Active_Cases}},{{item.Serious}},{{item.cases_million}},{{item.deaths_million}},{{item.tests}},{{item.test_million}},{{item.continent}}</p>
+    {% endfor %}
+
+
+  </body>
+</html>

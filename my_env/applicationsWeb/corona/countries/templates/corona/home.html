@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="{% static 'js/styles.js' %}"></script>
+   <style type="text/css">
+      body {
+       background: url('{% static "cover1.jpg" %}') repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+      }
+      h1 {
+        font-family: "courier";
+        color: "white";
+      }
+      .logo{
+        height: 15rem;
+      }
+   </style>
+  <body>
+    <h1>
+      <a href="{% url 'home' %}">
+      <img class="logo" src="{% static 'logo_transparent.png' %}" alt="" title="home">
+      </a>
+    </h1>
+
+     <div id="ember63" class="bs-row row ember-view">
+ <div id="ember65" class="col-sm-3 ember-view">
+   <div id="ember66" class="summary-statistic-card ember-view" style="position: relative;">
+     <div class="ss-title-row text-center" title="Cas confirmés">
+         <span class="ss-title" style="color:white;">Cas confirmés</span>
+     </div>
+     <hr class="ss-title-spacer">
+    <div class="text-center">
+       <span class="ss-value" style="color: White; font-size: 26.333333333333332px" id="confirmed"></span><span class="ss-trail-label"></span>
+    </div>
+    <div class="text-center">
+       <div class="trailingText" style="color:White;">الحالات المؤكدة</div>
+    </div>
+    <div class="ss-detail" style="color:White;">
+      Source:
+      <a rel="nofollow" href="https://github.com/ExpDev07/coronavirus-tracker-api" id="ember79" class="ember-view"> the Johns Hopkins University Center for Systems Science and Engineering</a>
+         </div>
+     <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -13px -12px -12px -13px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 193px; height: 203px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+   <div id="ember73" class="col-sm-3 ember-view"><div id="ember74" class="summary-statistic-card ember-view" style="position: relative;">  <div class="ss-title-row text-center" title="Cas décédés">
+     <span class="ss-title" style="color:White;">Cas décédés</span>
+   </div>
+   <hr class="ss-title-spacer">
+     <div class="text-center">
+       <span class="ss-value" style="color: White; font-size: 26.333333333333332px" id="morts"></span><span class="ss-trail-label"></span>
+     </div>
+   <div class="text-center">
+     <div class="trailingText" style="color:white;">الوفيات</div>
+   </div>
+     <div class="ss-detail" style="color:white;">
+       Source:
+       <a rel="nofollow" href="https://github.com/ExpDev07/coronavirus-tracker-api" id="ember79" class="ember-view"> the Johns Hopkins University Center for Systems Science and Engineering
+           </div>
+ <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -13px -12px -12px -13px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 193px; height: 203px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div>
+ </div>
+ <div id="ember65" class="col-sm-3 ember-view">
+   <div id="ember66" class="summary-statistic-card ember-view" style="position: relative;">
+     <div class="ss-title-row text-center" title="Mise a Jour">
+         <span class="ss-title" style="color:white;">Last Update</span>
+     </div>
+     <hr class="ss-title-spacer">
+    <div class="text-center">
+       <span class="ss-value" style="color: White; font-size: 26.333333333333332px" id="MiseJour"></span><span class="ss-trail-label"></span>
+    </div>
+    <div class="ss-detail" style="color:White;">
+
+      <a rel="nofollow" href="#" id="ember79" class="ember-view">
+         </a>
+         </div>
+     <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -13px -12px -12px -13px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 193px; height: 203px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+ <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -13px -12px -12px -13px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 193px; height: 203px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div>
+ </div>
+ </div>
+
+
+ <div class="col-xs-12" style="width:80%;">
+   <iframe style="width: 100%; border-style: none; height: 500px" src="https://arcg.is/0fHmTX" class="hxl-preview-iframe" id="custom-viz-iframe">
+   </iframe>
+ </div>
+
+ <div class="footer">
+   <p style="color: coral;">© 2020 Riali MOUAD.  All rights reserved.</p>
+   <ul>
+    <li>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-facebook"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-twitter"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-instagram"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-linkedin"></span>
+      </a>
+    </li>
+  </ul>
+ </div>
+
+
+ <!-------------->
+
+  </body>
+  <!----------->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="menu-icons" style="color:Red">
+          <i class="icon ion-md-close"></i>
+        </div>
+        <ul class="nav-list">
+          <li style="color:White">
+            <a href="#">Home</a>
+            <ul class="sub-menu">
+              <li style="color:White">
+                <a href="https://github.com/RIALI-MOUAD/Covid19-Full-Datasets.git">Data</a>
+              </li>
+              <li style="color:White">
+                <a href="{% url 'contact_upload' %}">upload</a>
+              </li>
+              <li style="color:White">
+                <a href="#">blog</a>
+              </li>
+              <li style="color:White">
+                <a href="#">contact</a>
+              </li>
+              <li style="color:White">
+                <a href="#">about</a>
+              </li>
+            </ul>
+          </li>
+          <li style="color:White">
+            <a href="/blog">blog</a>
+          </li>
+          <li style="color:White">
+            <a href="#">Stat</a>
+            <ul class="sub-menu">
+              <li style="color:White">
+                <a href="{% url 'newc' %}">New</a>
+              </li>
+              <li style="color:White">
+                <a href="{% url 'death' %}">Deaths</a>
+              </li>
+              <li style="color:White">
+                <a href="{% url 'global' %}">global</a>
+              </li>
+              <li style="color:White">
+                <a href="https://github.com/RIALI-MOUAD/Covid19-Full-Datasets.git">data</a>
+              </li>
+            </ul>
+          </li>
+           <li style="color:White">
+            <a href="{% url 'stat' %}">StatMaroc</a>
+          </li>
+          <li style="color:White">
+            <a href="#">About</a>
+          </li>
+        </li>
+        <li class="move-right btn" style="color:White">
+          <a href="/admin/">Register</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!------->
+
+</html>

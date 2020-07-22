@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+  </head>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles_blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <style type="text/css">
+      body {
+       background: url('{% static "coverblog.jpg" %}') repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+      }
+      h1 {
+        font-family: "courier";
+        color: "white";
+      }
+      .logo{
+        width: 29rem;
+        height: 21rem;
+      }
+   </style>
+  <body>
+    <h1>
+      <a href="#">
+      <img class="logo-blog" src="{% static 'aljoscha-laschgari-F2tZmxGtrX8-unsplash.jpg' %}" alt="" title="home">
+      </a>
+    </h1>
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+         <h1 class="display-4 font-italic">Le portrait de la sante de la famille</h1>
+         <p class="lead my-3">Dans une logique globale de proximité vis à vis du citoyen et du renforcement de la mission de l'éducation pour la santé, ...</p>
+      <p class="lead mb-0"><a href="http://sehati.gov.ma/" class="text-white font-weight-bold">Find out more...</a></p>
+    </div></div>
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+         <h1 class="display-4 font-italic">Laisses les chiffres parlent!</h1>
+         <p class="lead my-3">If You're intrested in numbers,I call u to click bellow to find out more then 80 datasets about the same topic (COVID-19), ...</p>
+      <p class="lead mb-0"><a href="https://github.com/RIALI-MOUAD/Covid19-Full-Datasets.git" class="text-white font-weight-bold">Find out more...</a></p>
+    </div></div>
+    {% for post in posts %}
+    <div class="card">
+        <h2 style="color:#ff6600">{{post.titre}}</h2>
+        <h5 style="font-family:sans-serif">{{post.date}}</h5>
+  <div class="fakeimg" style="height:200px;"></div>
+        <img src="{{post.img.url}}" class="img-post" alt="TMAGE"><p style="color: #000066;font-family:sans-serif">{{post.nickname}}</p><p>{{post.body|truncatewords:10}}</p>
+        <a href="/blog/{{post.id}}" style="color:#eb3007">Continue Reading...</a>
+</div>
+     {% endfor %}
+
+
+     <div class="footer">
+      <p style="color: coral;">© 2020 Riali MOUAD.  All rights reserved.</p>
+      <ul>
+       <li>
+         <a href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span class="fa fa-facebook"></span>
+         </a>
+       </li>
+       <li>
+         <a href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span class="fa fa-twitter"></span>
+         </a>
+       </li>
+       <li>
+         <a href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span class="fa fa-instagram"></span>
+         </a>
+       </li>
+       <li>
+         <a href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span class="fa fa-linkedin"></span>
+         </a>
+       </li>
+     </ul>
+    </div>
+  </body>
+  <!----------->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="menu-icons" style="color:Red">
+          <i class="icon ion-md-close"></i>
+        </div>
+        <ul class="nav-list">
+          <li style="color:#eb3007">
+            <a href="/">Home
+            <i class="fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li style="color:White">
+                <a href="https://github.com/RIALI-MOUAD/Covid19-Full-Datasets.git">Data</a>
+              </li>
+              <li style="color:White">
+                <a href="{% url 'contact_upload' %}">upload</a>
+              </li>
+              <li style="color:White">
+                <a href="/blog">blog</a>
+              </li>
+              <li style="color:White">
+                <a href="#">contact</a>
+              </li>
+              <li style="color:White">
+                <a href="#">about</a>
+              </li>
+            </ul>
+          </li>
+          <li style="color:White">
+            <a href="#">blog</a>
+          </li>
+           <li style="color:White">
+            <a href="#">contact</a>
+          </li>
+          <li style="color:White">
+            <a href="#">About</a>
+          </li>
+        <li class="move-right btn" style="color:White">
+          <a href="/admin/">Register</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!------->
+
+</html>

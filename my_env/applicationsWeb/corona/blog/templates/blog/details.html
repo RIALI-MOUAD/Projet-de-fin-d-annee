@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+  </head>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles_blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <style type="text/css">
+      body {
+       background: url('{% static "coverblog.jpg" %}') repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+      }
+      h1 {
+        font-family: "courier";
+        color: "white";
+      }
+      .logo{
+        width: 29rem;
+        height: 21rem;
+      }
+   </style>
+  <body>
+    <h1>
+      <a href="/blog">
+      <img class="logo-blog" src="{% static 'aljoscha-laschgari-F2tZmxGtrX8-unsplash.jpg' %}" alt="" title="home">
+      </a>
+    </h1>
+    
+    <div class="card">
+        <h2 style="color:#ff6600">{{post.titre}}</h2>
+        <h5 style="font-family:sans-serif">{{post.date}}</h5>
+  <div class="fakeimg" style="height:200px;"></div>
+        <img src="{{post.img.url}}" class="img-post" alt="TMAGE"><p style="color: #000066;font-family:sans-serif">{{post.nickname}}</p><p style="font-family:sans-serif;">{{post.body}}</p>
+        <a href="/blog" style="color:#eb3007">The end</a>
+</div>
+<div class="footer">
+  <p style="color: coral;">© 2020 Riali MOUAD.  All rights reserved.</p>
+  <ul>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fa fa-facebook"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fa fa-twitter"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fa fa-instagram"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fa fa-linkedin"></span>
+     </a>
+   </li>
+ </ul>
+</div>
+</body>
+  <!----------->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="menu-icons" style="color:Red">
+          <i class="icon ion-md-close"></i>
+        </div>
+        <ul class="nav-list">
+          <li style="color:#eb3007">
+            <a href="/">Home
+            <i class="fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li style="color:White">
+                <a href="{% url 'tableau' %}">Data</a>
+              </li>
+              <li style="color:White">
+                <a href="{% url 'contact_upload' %}">upload</a>
+              </li>
+              <li style="color:White">
+                <a href="#">blog</a>
+              </li>
+              <li style="color:White">
+                <a href="#">contact</a>
+              </li>
+              <li style="color:White">
+                <a href="#">about</a>
+              </li>
+            </ul>
+          </li>
+          <li style="color:White">
+            <a href="/blog">blog</a>
+          </li>
+           <li style="color:White">
+            <a href="#">contact</a>
+          </li>
+          <li style="color:White">
+            <a href="#">About</a>
+          </li>
+        <li class="move-right btn" style="color:White">
+          <a href="/admin/">Register</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!------->
+
+</html>

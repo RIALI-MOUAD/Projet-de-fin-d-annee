@@ -1,0 +1,185 @@
+/*Nav css goes here*/
+
+/*End nav css*/
+
+/*Hero*/
+*,
+*::after{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+.text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+    text-align: center;
+}
+
+.text h1{
+    font-size: 8rem;
+    margin: 2rem 0;
+    font-family: 'Blastimo', sans-serif;
+}
+
+.text h2{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.text p{
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+}
+
+.text .btn{
+    font-size: 1.6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+.menu-icons i{
+  color: White;
+  font-size: 2rem;
+  position: absolute;
+  top: 70%;
+  right: 6rem;
+  transform: translate(-50%);
+}
+
+nav{
+  position: absolute;
+  top: 115%;
+  width: 100%;
+  height: 8rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.nav-list{
+  display:flex;
+}
+.nav-list li{
+  line-height:10px;
+  position: relative;
+  top: 5rem;
+}
+
+.sub-minu{
+  line-height: 2rem;
+}
+.nav-list  a{
+  display: block;
+  color:  #191919;
+  padding-top: 1rem;
+  padding-right: 5rem;
+  font-size: 1rem;
+  font-family: cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 650ms;
+}
+.logo-blog{
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.nav-list a:hover{
+  color: #b30000;
+}
+
+.minu-icon i:hover{
+  color:Orange;
+}
+
+
+.btn{
+  padding: 2rem;
+  display: inline-block;
+  background-color: white;
+  border: 2px solid Red;
+  border-radius: 5rem;
+  transition: background-color 650ms;
+}
+.btn:hover{
+  color: Red;
+  background-color: yellow;
+}
+
+.sub-menu{
+  width:10rem;
+  height: 20rem;
+  display: block;
+  position: absolute;
+  border-top: 3px solid #eb3007;
+  background-color:  #ffffb3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms;
+  z-index: 100;
+  top: 16rem;
+}
+
+.nav-list li:hover > .sub-menu {
+  top: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.col-md-6.px-0 {
+  padding-top: 5rem;
+  background-color: White;
+  height: 20rem;
+  transition: all 650ms;
+  opacity: 0.5;
+  font-family: cursive;
+}
+
+.col-md-6.px-0 h1{
+  font-family:fantasy;
+}
+.col-md-6.px-0 :hover{
+  opacity: 0.8;
+}
+
+.col-md-6.px-0 h1:hover{
+  color: Blue;
+}
+
+.col-auto.d-none.d-lg-block{
+  position: relative;
+  left:   60%;
+}
+
+.col.p-4.d-flex.flex-column.position-static{
+  position: relative;
+  padding-top: 2rem;
+  border-top:4px solid  Red;
+  background-color: White;
+  width: 91%;
+  height: 13rem;
+  font-family: sans-serif;
+  border-radius: 10%;
+}
+@media screen and (max-width: 830px){
+    .text h1{
+        font-size: 4rem;
+    }
+
+    .text .btn{
+        font-size: 1.2rem;
+    }
+}

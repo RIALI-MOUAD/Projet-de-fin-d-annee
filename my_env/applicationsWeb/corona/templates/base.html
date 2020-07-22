@@ -1,0 +1,53 @@
+<!doctype html>
+{% load static%}
+<html lang="en">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a class="btn btn-info" role="button" href="{% url 'home' %}" style="margin:10px 0">Home</a>
+       <a class="btn btn-primary" role="button" href="{% url 'global' %}" >Cases </a>
+       <a  class="btn btn-success" role="button" href="{% url 'recover' %}">Recovered</a>
+       <a class="btn btn-info" role="button" href="{% url 'death' %}" tabindex="-1" aria-disabled="true">Death</a>
+       <a class="btn btn-warning" role="button" href="#" tabindex="-1" aria-disabled="true">Tests</a>
+       <a class="btn btn-danger" role="button" href="{% url 'newc' %}">New Cases <span class="sr-only">(current)</span></a>
+       <style type="text/css">
+          nav {
+           background: url('{% static "logo_transparent.jpg" %}') repeat center center fixed;
+           -webkit-background-size: cover;
+           -moz-background-size: cover;
+           -o-background-size: cover;
+           background-size: cover;
+          }
+          </style>
+    <script>
+    {
+      document.body.style.background = "#f3f3f3";
+    }
+    </script>
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  </ul>
+
+</div>
+  </nav>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- semantic UI -->
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <!--Chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+
+  <body>
+    <a href="{% url 'tableau' %}" class="btn btn-primary" role="button">Tap here for more details</a>
+
+    {% block content %}
+    {% endblock content %}
+  </body>
+</html>

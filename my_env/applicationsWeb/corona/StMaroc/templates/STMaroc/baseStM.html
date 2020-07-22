@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BASE CSV</title>
+  </head>
+  <body>
+    <pre>date,TotalCases,case per day,Deaths,Deaths per day,Recover,REcovered per day,Tests,Tests per Day</pre>
+    {% for item in qs%}
+     <pre>{{item.date}},{{item.cases}},{{item.casesD}},{{item.death}},{{item.deathD}},{{item.recov}},{{item.recovD}},{{item.tests}},{{item.testsD}}</pre>
+    {% endfor %}
+
+
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #fffdd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddd;
+    }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button" >
+      <a href="{% url 'home' %}">Home</a>
+    </button>
+    <button type="button" name="button">
+      <a href="{% url 'newc' %}">Retour</a>
+    </button>
+    <table>
+      <tr>
+        <td>Country</td>
+        <td>Total Cases</td>
+        <td>New Cases</td>
+        <td>Deaths</td>
+        <td>New Deaths</td>
+        <td>Recover</td>
+        <td>Active Cases</td>
+        <td>Serious</td>
+        <td>Cases Par Million</td>
+        <td>Death Par Million</td>
+        <td>Tests</td>
+        <td>Test Par Million</td>
+        <td>Continent</td>
+        <td>Date</td>
+      </tr>
+      {% for item in qs%}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.cases}}</td>
+        <td>{{item.New_cases}}</td>
+        <td>{{item.death}}</td>
+        <td>{{item.New_Deaths}}</td>
+        <td>{{item.Recover}}</td>
+        <td>{{item.Active_Cases}}</td>
+        <td>{{item.Serious}}</td>
+        <td>{{item.cases_million}}</td>
+        <td>{{item.deaths_million}}</td>
+        <td>{{item.tests}}</td>
+        <td>{{item.test_million}}</td>
+        <td>{{item.continent}}</td>
+        <td>{{item.date}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <button type="button" name="button">
+      <a href="{% url 'home' %}">Home</a>
+    </button>
+    <button type="button" name="button">
+      <a href="{% url 'newc' %}">Retour</a>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base0.html' %}
+
+{% block title %}Cumul des Tests par jour (Morocco){% endblock title %}
+
+
+{% block content %}
+<div id="container" style="width: 75%;">
+   <canvas id="myChart" ></canvas>
+</div>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [{% for item in qs %}'{{item.date}}',{% endfor %}],
+        datasets: [{
+            label: ' of Tests',
+            data: [{% for item in qs %}{{item.tests}},{% endfor %}],
+            backgroundColor: [
+            'rgba(153, 102, 255, 0.2)',
+            ],
+            borderColor: [
+                'Yellow'
+            ],
+            borderWidth: 3
+        }]
+    },
+
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+{% endblock %}
